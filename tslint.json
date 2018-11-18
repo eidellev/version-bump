@@ -8,5 +8,8 @@
     "typedef-whitespace": true,
     "object-literal-sort-keys": false
   },
+  "linterOptions": {
+    "exclude": ["dist/**/*.ts"]
+  },
   "rulesDirectory": ["tslint-plugin-prettier"]
 }
