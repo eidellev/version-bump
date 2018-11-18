@@ -1,5 +1,5 @@
 {
-  "name": "version-bump",
+  "name": "@eidellev/version-bump",
   "version": "1.0.0",
   "description": "A simple utility to bump your versions programatically",
   "main": "dist/index.js",
