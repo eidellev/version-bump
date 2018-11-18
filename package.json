@@ -3,7 +3,59 @@
   "version": "1.0.0",
   "description": "A simple utility to bump your versions programatically",
   "main": "index.js",
-  "repository": "https://github.com/eidellev/version-bump.git",
+  "repository": "git@github.com:eidellev/version-bump.git",
   "author": "eidellev <levp22@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{ts,json,css,md}": [
+        "prettier --write",
+        "git add"
+      ],
+      "*.ts": [
+        "tslint --project . --fix",
+        "git add"
+      ]
+    },
+    "concurrent": false
+  },
+  "jest": {
+    "coverageDirectory": "coverage",
+    "verbose": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.118",
+    "lodash": "^4.17.11",
+    "typescript": "^3.1.6"
+  },
+  "devDependencies": {
+    "husky": "^1.1.4",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.15.2",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.16.0",
+    "tslint-plugin-prettier": "^2.0.1"
+  }
 }
