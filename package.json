@@ -1,0 +1,9 @@
+{
+  "name": "version-bump",
+  "version": "1.0.0",
+  "description": "A simple utility to bump your versions programatically",
+  "main": "index.js",
+  "repository": "https://github.com/eidellev/version-bump.git",
+  "author": "eidellev <levp22@gmail.com>",
+  "license": "MIT"
+}
